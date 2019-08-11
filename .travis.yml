@@ -8,9 +8,9 @@ script:
 deploy:
         provider: elasticbeanstalk
         region: "us-east-2"
-        app: "docker-ci-cd"
+        app: "docker"
         env: "DockerCiCd-env"
         bucket_name: "elasticbeanstalk-us-east-2-502659215395"
-        bucket_path: "docker-ci-cd"
+        bucket_path: "docker"
         on:
                 branch: master
