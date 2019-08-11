@@ -1,0 +1,7 @@
+sudo: required
+services:
+        - docker
+before_install:
+        - docker build -t reg1reg1/docker-ci-cd -f Dockerfile.dev .
+script:
+        - docker run -e CI=true reg1reg1/docker-ci-cd npm run test -- --coverage
