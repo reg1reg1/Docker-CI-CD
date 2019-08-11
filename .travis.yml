@@ -4,4 +4,4 @@ services:
 before_install:
         - docker build -t reg1reg1/docker-ci-cd -f Dockerfile.dev .
 script:
-        - docker run reg1reg1/docker-ci-cd npm run test -- --coverage
+        - docker run -e CI=true reg1reg1/docker-ci-cd npm run test -- --coverage
